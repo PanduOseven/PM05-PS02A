@@ -83,12 +83,12 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1168,542.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="860,434.8566666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtInvoicesLocal" />
       <Variable x:TypeArguments="x:String" Name="datapathLocal">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">Data\south_african_invoices.csv</Literal>
+          <Literal x:TypeArguments="x:String">Data\south_african_invoices_with_dupicates.csv</Literal>
         </Variable.Default>
       </Variable>
     </Sequence.Variables>
@@ -97,13 +97,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="ReadInvoices - Invoke Workflow File (ReadInvoices.xaml)" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ReadInvoices.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="ReadInvoices - Invoke Workflow File (ReadInvoices.xaml)" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ReadInvoices.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtInvoices">[dtInvoicesLocal]</OutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_datapath">[datapathLocal]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="RegisterToWebApplication - Invoke Workflow File (RegisterToWebApplication.xaml)" sap:VirtualizedContainerService.HintSize="450,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="RegisterToWebApplication.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="RegisterToWebApplication - Invoke Workflow File (RegisterToWebApplication.xaml)" sap:VirtualizedContainerService.HintSize="449.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="RegisterToWebApplication.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtInvoices">[dtInvoicesLocal]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
